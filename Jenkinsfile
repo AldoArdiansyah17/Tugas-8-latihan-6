@@ -11,7 +11,7 @@ pipeline {
         stage('Run Container') {
             steps {
                 sh 'docker run -d --name php-app -p 8081:8081 php-simple-app'
-                sh 'sleep 5' // tunggu server PHP siap
+                sh 'sleep 5'
             }
         }
 
