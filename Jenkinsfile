@@ -17,7 +17,8 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'php test.php'
+                // Menjalankan test.php DI DALAM container
+                sh 'docker exec php-app php /var/www/html/test.php'
             }
             post {
                 success {
